@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import { useMusic } from "../hooks/useMusic"
+import { useMusic } from "../contexts/MusicContext";
 
 export const MusicPlayer = () => {
     const {currentTrack,
@@ -15,7 +15,7 @@ export const MusicPlayer = () => {
         play,
         volume,
         setVolume,
-    } = useMusic()
+    } = useMusic();
 
     const audioRef = useRef(null);
 
